@@ -1,5 +1,7 @@
 # PocketBase Docker Image Builder
 
+**Disclaimer:** This is not an official PocketBase image. This project is community-supported and is not affiliated with the official PocketBase maintainers.
+
 This repository contains the Dockerfile and Makefile used to build and publish multi-architecture Docker images for [PocketBase](https://pocketbase.io/).
 
 ## Prerequisites
