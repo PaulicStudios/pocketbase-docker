@@ -5,6 +5,8 @@ DOCKER_REGISTRY := registry.coregame.de
 
 .PHONY: build push clean
 
+default: build
+
 # Create and use buildx builder for multi-arch support
 setup-buildx:
 	docker buildx create --name multiarch-builder --use || true
