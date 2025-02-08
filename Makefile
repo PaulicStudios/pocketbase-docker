@@ -22,7 +22,7 @@ build: setup-buildx
 		.
 
 # Push multi-architecture images to registry
-push: setup-buildx login
+push:
 ifdef DOCKER_REGISTRY
 	docker tag $(IMAGE_NAME):$(VERSION) $(DOCKER_REGISTRY)/$(IMAGE_NAME):$(VERSION)
 	docker tag $(IMAGE_NAME):$(VERSION) $(DOCKER_REGISTRY)/$(IMAGE_NAME):latest
