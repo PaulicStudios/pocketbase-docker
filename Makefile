@@ -1,7 +1,7 @@
 # Variables
 IMAGE_NAME := pocketbase
 VERSION := 0.25.0
-DOCKER_REGISTRY := registry.coregame.de/library
+DOCKER_REGISTRY := ghcr.io/paulicstudios
 
 .PHONY: build push clean
 
