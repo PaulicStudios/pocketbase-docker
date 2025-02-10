@@ -79,4 +79,30 @@ DOCKER_REGISTRY := registry.coregame.de  # Replace with your target Docker regis
   ./pocketbase serve --http=0.0.0.0:8090
   ```
 
+## Docker Compose Example
+
+Here's a sample `docker-compose.yml` file to get you started:
+
+```yaml
+services:
+  pocketbase:
+    image: ghcr.io/paulicstudios/pocketbase:latest
+    restart: unless-stopped
+    volumes:
+      - pocketbase-data:/home/pocketbase/pb_data
+      - ./pb_migrations:/home/pocketbase/pb_migrations
+    ports:
+      - 8090:8090
+
+volumes:
+  pocketbase-data:
+```
+
+This configuration:
+- Uses the latest version of the image
+- Persists the database and files in a named volume `pocketbase-data`
+- Mounts a local `pb_migrations` directory for database migrations
+- Exposes PocketBase on port 8090
+- Automatically restarts the container unless explicitly stopped
+
 ---
