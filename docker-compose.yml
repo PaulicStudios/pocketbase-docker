@@ -1,0 +1,12 @@
+services:
+pocketbase:
+    image: ghcr.io/paulicstudios/pocketbase:latest
+    restart: unless-stopped
+    volumes:
+      - pocketbase-data:/home/pocketbase/pb_data
+      - ./pb_migrations:/home/pocketbase/pb_migrations
+    ports:
+      - 8090:8090
+
+volumes:
+  pocketbase-data:
